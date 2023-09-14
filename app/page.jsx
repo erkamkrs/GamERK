@@ -10,13 +10,13 @@ export default async function HomePage() {
     return (
     <>
       <Heading>GamErk</Heading>
-      <p className="pb-3">
+      <p className="pb-3 text-slate-100 font-orbitron">
         Only the best video games, reviewed for you.
       </p>
       <ul className="flex flex-col gap-3">
         {reviews.map((review, index) => (
           <li key={review.slug}
-            className="bg-white border rounded shadow w-80
+            className="bg-white bg-opacity-30 border rounded shadow w-80
                        hover:shadow-xl sm:w-full">
             <Link href={`/reviews/${review.slug}`}
               className="flex flex-col sm:flex-row">

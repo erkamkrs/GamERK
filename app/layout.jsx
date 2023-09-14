@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <main className='grow py-3'>
           {children}
         </main>
-        <footer className='border-t py-3 text-center text-slate-100 text-xs'>
+        <footer className='border-t py-3 text-center text-slate-100 font-orbitron text-xs'>
           Game data and images courtesy of {"  "} <a href="https://rawg.io/" target='_blank'
           className="text-slate-950 hover:underline">{"  "}  RAWG</a>
            {" "} | Deployed on Vercel
