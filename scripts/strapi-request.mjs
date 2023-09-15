@@ -2,9 +2,8 @@ import { writeFileSync } from "node:fs";
 import qs from "qs";
 
 
-const url = "http://localhost:1337/api/reviews"+ "?" + 
+const url = "http://mighty-reward-a5fcb6d4f1.strapiapp.com/api/reviews"+ "?" + 
 qs.stringify({
-    filters: {slug: { $eq: "hades-2018"}},
     fields: ["slug", "title", "subtitle", "publishedAt", "body"],
     populate: { image : {fields: ["url"] } },
     pagination: { pageSize: 6},
