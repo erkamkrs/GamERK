@@ -32,23 +32,22 @@ export default function SearchBox() {
     router.push(`/reviews/${review.slug}`);
   };
 
-  console.log('[SearchBox] query:', query, debouncedQuery);
   if (!isClient) {
     return null;
   }
     return (
-        <div className='w-48 relative'>
-            <Combobox onChange={handleChange}>
+        <div className='w-auto md:w-auto relative'>
+            <Combobox  onChange={handleChange}>
                 <Combobox.Input placeholder="Search" 
                     value={query} onChange={(event) => setQuery(event.target.value)}
                     className="border p-2 rounded"
                 />
-                    <Combobox.Options className="absolute bg-white bg-opacity-50 py-1 w-full">
+                    <Combobox.Options className="absolute bg-white bg-opacity-20 py-1 md:w-auto ">
                         {reviews.map((review) => (
                             <Combobox.Option key={review.slug} value={review}>
                              {({ active }) => (
-                                <span className={`block px-2 truncate w-full ${
-                                    active ? 'bg-white bg-opacity-25' : ''  
+                                <span className={`block px-2 truncate w-full md:w-auto ${
+                                    active ? 'bg-white bg-opacity-40' : ''  
                                 }` }>
                                     {review.title}
                                 </span>
