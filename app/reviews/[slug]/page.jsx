@@ -11,7 +11,6 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetaData({params: {slug}}) {
-  console.log("ReviewPAge rendering:", slug);
   const review = await getReview(slug);
   // stops the rendering process if the slug doesn´t exist on data
   if (!review) {
